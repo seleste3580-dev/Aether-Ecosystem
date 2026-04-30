@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aether Network | Node Visualizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="ui-layer">
+      <header class="header">
+        <h1>AETHER <span>NETWORK</span></h1>
+        <div class="status">
+          <div class="indicator online"></div>
+          <span id="connection-status">CONNECTING...</span>
+        </div>
+      </header>
+      
+      <div class="sidebar left-panel">
+        <div class="panel">
+          <h2>NETWORK STATS</h2>
+          <div class="stat-row">
+            <span>ACTIVE NODES:</span>
+            <span id="node-count" class="highlight">0</span>
+          </div>
+          <div class="stat-row">
+            <span>VPN TUNNEL:</span>
+            <span class="highlight success">SECURE (SOCKS5)</span>
+          </div>
+          <div class="stat-row">
+            <span>ENCRYPTION:</span>
+            <span class="highlight">NOISE/ED25519</span>
+          </div>
+        </div>
+
+        <div class="panel mt-4">
+          <h2>NODE DISCOVERY LOG</h2>
+          <div id="log-container" class="log-container">
+            <div class="log-entry">Initializing swarm...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="globe-container"></div>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
